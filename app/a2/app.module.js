@@ -24,6 +24,9 @@ AppModule = __decorate([
         ],
         declarations: [
             list_component_1.ListComponent
+        ],
+        entryComponents: [
+            list_component_1.ListComponent
         ]
     })
 ], AppModule);

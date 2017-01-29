@@ -1,5 +1,11 @@
-angular.module('hybridApp', [])
-// todo: switch to TS, get inspired in angular-pure-typescript
-    .component('header', {
+angular.module('hybridApp', ['list'])
+
+    .controller('MainCtrl', function () {
+        this.onSelected = function (event) {
+            alert(event);
+        }
+    })
+
+    .component('headerComponent', {
         template: '<p>ahoj ja jsem header</p>'
     });

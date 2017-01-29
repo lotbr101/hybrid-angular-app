@@ -24,7 +24,13 @@
 <!-- 3. Display the application -->
 <body>
 
-<header></header>
+<div ng-controller="MainCtrl as main">
+
+<header-component></header-component>
+
+<list-component [list-data]="[{title:'karenina'}, {title: 'crime'}]" (selected)="main.onSelected($event)"></list-component>
+
+</div>
 
 </body>
 </html>

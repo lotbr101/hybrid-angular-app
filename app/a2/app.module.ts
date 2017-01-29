@@ -10,6 +10,9 @@ import {ListComponent} from "./list.component";
     ],
     declarations: [
         ListComponent
+    ],
+    entryComponents: [
+        ListComponent
     ]
 })
 export class AppModule {
