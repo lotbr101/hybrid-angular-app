@@ -1,7 +1,0 @@
-cd to dir containing package.json
-
-npm start (start both TS compiler and lite server)
-
-npm run lite (runs only lite server)
-
-for details see package.json
