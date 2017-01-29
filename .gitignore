@@ -5,7 +5,6 @@
 # IntelliJ project files
 .idea
 node_modules
-#app/**/*.js
-app/**/*.map
-
-app/a2/list.component.js
+app/a2/*.js
+app/a2/*.map
+app/ajs/*.map
