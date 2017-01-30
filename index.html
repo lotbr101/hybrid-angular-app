@@ -4,7 +4,8 @@
     <title>Hybrid Angular Application</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
     <!-- 1. Load AJS files -->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="app/ajs/app.module.ajs.js"></script>
@@ -18,19 +19,31 @@
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app').catch(function(err){ console.error(err); });
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
     </script>
 </head>
 <!-- 3. Display the application -->
 <body>
 
-<div ng-controller="MainCtrl as main">
+<div class="container" ng-controller="MainCtrl as main">
 
-<header-component></header-component>
+    <div class="row">
+        <div class="col col-lg-12">
+            <h1>Hybrid AngularJS + Angular application</h1>
+            <header-component></header-component>
+        </div>
+    </div>
 
-<list-component [list-data]="[{title:'karenina'}, {title: 'crime'}]" (selected)="main.onSelected($event)"></list-component>
-
+    <div class="row">
+        <div class="col col-lg-12">
+            <list-component [list-data]="[{title:'karenina'}, {title: 'crime'}]"
+                            (selected)="main.onSelected($event)"></list-component>
+        </div>
+    </div>
 </div>
+
 
 </body>
 </html>
