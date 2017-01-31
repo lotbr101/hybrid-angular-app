@@ -1,0 +1,11 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "author": "Fyodor Dostoyevsky",
+      "name": "The Crime and the Punishment",
+      "description": "One of the world's best classic books",
+      "rating": 4.5
+    }
+  ]
+}
