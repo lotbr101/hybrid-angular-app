@@ -14,8 +14,8 @@ export class ListComponent {
 
     constructor() {}
 
-    onSelected() {
-        this.selected.emit({title:'fuck'})
+    onSelected(id:number) {
+        this.selected.emit({itemId: id, eventType:'select'})
     }
 }
 

@@ -3,12 +3,15 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Event</th>
+                <th>Item ID</th>
             </tr>
         </thead>
         <tbody>
-
+            <tr ng-repeat="e in $ctrl.eventList">
+                <td>{{e.eventType}}</td>
+                <td>{{e.itemId}}</td>
+            </tr>
         </tbody>
     </table>
 </div>

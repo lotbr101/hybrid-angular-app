@@ -6,6 +6,34 @@
       "name": "The Crime and the Punishment",
       "description": "One of the world's best classic books",
       "rating": 4.5
+    },
+    {
+      "id": 2,
+      "author": "Kurt Vonnegut Jr",
+      "name": "Breakfest of Champions",
+      "description": "Nice satire",
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "author": "Kurt Vonnegut Jr",
+      "name": "Slaughterhouse five",
+      "description": "One of the biggest WWII novels",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "author": "E. L. James",
+      "name": "Fifty sahdes of grey",
+      "description": "...?",
+      "rating": 0
+    },
+    {
+      "id": 5,
+      "author": "Anthony Burgess",
+      "name": "The clockwork orange",
+      "description": "Nice novel about a young man who loved some moloko with knives and ultra-violence",
+      "rating": 3.75
     }
   ]
 }

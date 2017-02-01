@@ -32,13 +32,13 @@
     <div class="row">
         <div class="col col-lg-12">
             <h1>Hybrid AngularJS + Angular application</h1>
-            <header-component></header-component>
+            <header-component event-list="main.eventList"></header-component>
         </div>
     </div>
 
     <div class="row">
         <div class="col col-lg-12">
-            <list-component [list-data]="[{title:'karenina'}, {title: 'crime'}]"
+            <list-component [list-data]="main.books"
                             (selected)="main.onSelected($event)"></list-component>
         </div>
     </div>

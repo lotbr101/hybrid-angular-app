@@ -1,4 +1,4 @@
 <div class="a2">
-    Hi, I am list component
-    <p *ngFor="let l of listData" (click)="onSelected()">{{l['title']}}</p>
+    <h4>Angular: ListComponent</h4>
+    <p *ngFor="let l of listData" (click)="onSelected(l.id)">{{l?.name}}</p>
 </div>

@@ -2,28 +2,28 @@ angular.module('hybridApp', ['list', 'book-service'])
 
     .controller('MainCtrl', ['bookService', function (bookService) {
 
-        this.eventList = [];
-        this.books = {};
+        var ctrl = this;
 
-        this.onSelected = function (event) {
-            alert(event);
+        ctrl.eventList = [];
+        ctrl.books = [];
+
+        ctrl.onSelected = function (event) {
+            ctrl.eventList.push(event);
         }
 
         this.$onInit = function () {
             bookService.getAll().then(
                 function (res) {
-                    this.books = res['books'];
-                },
-                function (reason) {
-                    console.log(reason);
+                    ctrl.books = res['books'];
                 }
             )
         }
     }])
 
     .component('headerComponent', {
-        bindings: {
 
+        bindings: {
+            eventList: '<'
         },
 
         templateUrl: 'app/ajs/tpl/header-component.html'
