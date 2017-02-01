@@ -1,17 +1,22 @@
 <div class="a1">
+
     <h4>AngularJS component: headerComponent</h4>
-    <table>
+
+    <table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>Event</th>
                 <th>Item ID</th>
+                <th>Item Name</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="e in $ctrl.eventList">
+            <tr ng-repeat="e in $ctrl.eventList track by $index">
                 <td>{{e.eventType}}</td>
                 <td>{{e.itemId}}</td>
+                <td>{{e.itemName}}</td>
             </tr>
         </tbody>
     </table>
+
 </div>

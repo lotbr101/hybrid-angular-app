@@ -14,9 +14,10 @@ export class ListComponent {
 
     constructor() {}
 
-    onSelected(id:number) {
-        this.selected.emit({itemId: id, eventType:'select'})
+    onSelected(id:number, name:string) {
+        this.selected.emit({eventType:'select', itemId: id, itemName: name})
     }
+
 }
 
 angular.module('list', [])

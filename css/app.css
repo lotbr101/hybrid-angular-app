@@ -9,3 +9,25 @@
     padding: 12px;
     background-color: #f7bdaa;
 }
+
+.a2 table {
+    background-color: #f9dcd3;
+}
+
+.a2 table th {
+    background-color: crimson;
+    color: white;
+}
+
+.a2 table tr {
+    cursor:pointer;
+}
+
+.a1 table {
+    background-color: #d7e2f5;
+}
+
+.a1 table th {
+    background-color: cornflowerblue;
+    color: white;
+}

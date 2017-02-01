@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
-    <!-- 1. Load AJS files -->
+
+    <!-- 1. Load AngularJS files -->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="app/ajs/app.module.ajs.js"></script>
 
-    <!-- Polyfill(s) for older browsers -->
+    <!-- 2. Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
 
-    <!-- 2. Configure SystemJS -->
+    <!-- 3. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
         System.import('app').catch(function (err) {
@@ -24,7 +25,7 @@
         });
     </script>
 </head>
-<!-- 3. Display the application -->
+
 <body>
 
 <div class="container" ng-controller="MainCtrl as main">
@@ -32,14 +33,20 @@
     <div class="row">
         <div class="col col-lg-12">
             <h1>Hybrid AngularJS + Angular application</h1>
+
+            <!--AngularJS Component-->
             <header-component event-list="main.eventList"></header-component>
         </div>
     </div>
 
     <div class="row">
         <div class="col col-lg-12">
+
+            <!--Angular Component-->
             <list-component [list-data]="main.books"
-                            (selected)="main.onSelected($event)"></list-component>
+                            [disabled]="main.showActionConfirmation"
+                            (selected)="main.onSelected($event)"
+                            (deleted)="main.onDeletedQuery($event)"></list-component>
         </div>
     </div>
 </div>
