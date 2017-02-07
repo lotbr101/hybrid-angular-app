@@ -8,15 +8,19 @@
                 <th>Author</th>
                 <th>Description</th>
                 <th>Rating</th>
+                <th>Select</th>
+                <th>Query delete</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let l of listData" (click)="onSelected(l.id, l.name)">
+            <tr *ngFor="let l of listData">
                 <td>{{l.id}}</td>
                 <td>{{l.name}}</td>
                 <td>{{l.author}}</td>
                 <td>{{l.description}}</td>
                 <td>{{l?.rating}}</td>
+                <td><button class="btn btn-primary" (click)="onSelected(l.id, l.name)">Select</button></td>
+                <td><button class="btn btn-warning" (click)="onDeleteQuery(l.id, l.name)">Query delete</button></td>
             </tr>
         </tbody>
     </table>

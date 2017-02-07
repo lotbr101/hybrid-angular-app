@@ -35,7 +35,7 @@
             <h1>Hybrid AngularJS + Angular application</h1>
 
             <!--AngularJS Component-->
-            <header-component event-list="main.eventList"></header-component>
+            <header-component event-list="main.eventList" on-rollback="main.doRollback(item)"></header-component>
         </div>
     </div>
 
@@ -46,7 +46,7 @@
             <list-component [list-data]="main.books"
                             [disabled]="main.showActionConfirmation"
                             (selected)="main.onSelected($event)"
-                            (deleted)="main.onDeletedQuery($event)"></list-component>
+                            (delete-query)="main.onDeleteQuery($event)"></list-component>
         </div>
     </div>
 </div>

@@ -11,11 +11,16 @@ export class ListComponent {
 
     @Input() listData:Array<Object>;
     @Output() selected = new EventEmitter<Object>();
+    @Output() deleteQuery = new EventEmitter<Object>();
 
     constructor() {}
 
     onSelected(id:number, name:string) {
         this.selected.emit({eventType:'select', itemId: id, itemName: name})
+    }
+
+    onDeleteQuery(id:number, name:string) {
+        this.deleteQuery.emit({eventType:'delete query', itemId: id, itemName: name})
     }
 
 }
@@ -26,5 +31,5 @@ angular.module('list', [])
     downgradeComponent({
         component: ListComponent,
         inputs: ['listData'],
-        outputs: ['selected']
+        outputs: ['selected', 'deleteQuery']
     }) as angular.IDirectiveFactory);

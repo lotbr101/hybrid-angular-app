@@ -4,18 +4,25 @@
 
     <table class="table table-bordered table-striped">
         <thead>
-            <tr>
-                <th>Event</th>
-                <th>Item ID</th>
-                <th>Item Name</th>
-            </tr>
+        <tr>
+            <th>Event</th>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="e in $ctrl.eventList track by $index">
-                <td>{{e.eventType}}</td>
-                <td>{{e.itemId}}</td>
-                <td>{{e.itemName}}</td>
-            </tr>
+        <tr ng-repeat="e in $ctrl.eventList track by $index">
+            <td>{{e.eventType}}</td>
+            <td>{{e.itemId}}</td>
+            <td>{{e.itemName}}</td>
+            <td>
+                <span ng-show="e.showButtons">
+                    <button class="btn btn-danger">Yes</button>
+                    <button class="btn btn-default" ng-click="$ctrl.rollback(e)">No</button>
+                </span>
+            </td>
+        </tr>
         </tbody>
     </table>
 
