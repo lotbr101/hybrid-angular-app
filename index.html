@@ -32,10 +32,15 @@
 
     <div class="row">
         <div class="col col-lg-12">
-            <h1>Hybrid AngularJS + Angular application</h1>
+            <h1>Hybrid <span style="color:cornflowerblue;">AngularJS</span> + <span style="color:crimson;">Angular</span>  application</h1>
 
             <!--AngularJS Component-->
-            <header-component event-list="main.eventList" on-rollback="main.doRollback(item)" on-commit="main.doCommit(item)"></header-component>
+            <header-component
+                    event-list="main.eventList"
+                    on-rollback="main.doRollback(item)"
+                    on-commit="main.doCommit(item)"
+                    on-clear-events="main.doClearEvents()">
+            </header-component>
         </div>
     </div>
 
