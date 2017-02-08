@@ -27,3 +27,19 @@
     background-color: cornflowerblue;
     color: white;
 }
+
+.master {
+    background-color: #d7e2f5;
+}
+
+.no-left-padding {
+    padding-left: 0;
+}
+
+.a1-name {
+    color:cornflowerblue;
+}
+
+.a2-name {
+    color:crimson;
+}

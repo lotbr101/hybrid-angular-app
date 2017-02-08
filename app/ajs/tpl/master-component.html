@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col col-lg-12 master">
+
+        <h3>AngularJS master-component</h3>
+
+        <div class="row">
+            <div class="col col-lg-12">
+
+                <!--AngularJS Component-->
+                <header-component
+                        event-list="main.eventList"
+                        on-rollback="main.doRollback(item)"
+                        on-commit="main.doCommit(item)"
+                        on-clear-events="main.doClearEvents()">
+                </header-component>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-lg-12">
+
+                <!--Angular Component-->
+                <list-component [list-data]="main.books"
+                                (selected)="main.onSelected($event)"
+                                (delete-query)="main.onDeleteQuery($event)"></list-component>
+            </div>
+        </div>
+
+    </div>
+</div>
