@@ -22,6 +22,19 @@ angular.module('hybridApp', ['list', 'book-service'])
             ctrl.eventList.push(newEvent);
         };
 
+        ctrl.doCommit = function (event) {
+            event['showButtons'] = false;
+            var newEvent = {eventType:'delete commit', itemId: event.itemId, itemName: event.itemName};
+            ctrl.eventList.push(newEvent);
+            var index;
+            for (var i = 0; i < ctrl.books.length; i++) {
+                if (ctrl.books[i]['id'] === event.itemId) {
+                    index = i;
+                }
+            }
+            ctrl.books.splice(index, 1);
+        };
+
         this.$onInit = function () {
             bookService.getAll().then(
                 function (res) {
@@ -35,7 +48,8 @@ angular.module('hybridApp', ['list', 'book-service'])
 
         bindings: {
             eventList: '<',
-            onRollback: '&'
+            onRollback: '&',
+            onCommit: '&'
         },
 
         controller: function () {
@@ -43,6 +57,10 @@ angular.module('hybridApp', ['list', 'book-service'])
 
             self.rollback = function (e) {
                 self.onRollback({item: e});
+            };
+
+            self.commit = function (e) {
+                self.onCommit({item: e});
             }
         },
 

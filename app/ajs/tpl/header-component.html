@@ -18,7 +18,7 @@
             <td>{{e.itemName}}</td>
             <td>
                 <span ng-show="e.showButtons">
-                    <button class="btn btn-danger">Yes</button>
+                    <button class="btn btn-danger" ng-click="$ctrl.commit(e)">Yes</button>
                     <button class="btn btn-default" ng-click="$ctrl.rollback(e)">No</button>
                 </span>
             </td>
